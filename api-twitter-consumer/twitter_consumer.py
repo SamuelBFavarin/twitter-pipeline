@@ -22,7 +22,7 @@ class TwitterConsumer(tweepy.Stream):
         
         print(data)
 
-
+print("Listing tweets...")
 consumer = TwitterConsumer(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 consumer.filter(follow=[FOLLOW_USER])
 consumer.sample()
