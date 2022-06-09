@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#credentials 
+api-twitter-consumer/api_credentials.json
