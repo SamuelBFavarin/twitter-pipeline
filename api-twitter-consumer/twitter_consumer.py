@@ -24,9 +24,8 @@ class TwitterConsumer(tweepy.Stream):
         message = {
             'id': status.id,
             'id_user': status.user.id,
-            'message': status.text
-            #TODO: json dumps not working with this format
-            #'created_at': status.created_at             
+            'message': status.text,
+            'created_at': status.created_at.strftime("%Y-%m-%d %H:%M:%S")             
         }
         
         pub_sub_publisher = PubSubPublisher(PROJECT_ID, TOPIC_ID)
