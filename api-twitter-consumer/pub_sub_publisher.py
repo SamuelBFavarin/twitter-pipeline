@@ -1,5 +1,6 @@
 from concurrent import futures
 from google.cloud import pubsub_v1
+import json
 
 
 class PubSubPublisher():
@@ -16,7 +17,7 @@ class PubSubPublisher():
     def publish(self, message: str):
         
         try:
-            publish_future = self.publisher.publish(self.topic_path, message.encode("utf-8"))  
+            publish_future = self.publisher.publish(self.topic_path, json.dumps(message).encode("utf-8"))  
             publish_future.add_done_callback(self._get_callback(publish_future, message))
             self.publish_futures.append(publish_future)
             return True
