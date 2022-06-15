@@ -130,3 +130,5 @@ dmypy.json
 
 #credentials 
 api-twitter-consumer/api_credentials.json
+api-twitter-consumer/gcloud_credentials.json
+api-twitter-consumer/twitter-pipeline-gcp-account.json
