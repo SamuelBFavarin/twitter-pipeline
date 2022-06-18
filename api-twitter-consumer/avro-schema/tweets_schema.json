@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "name": "Tweets",
+    "fields": [
+      {
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "name": "id_user",
+        "type": "long"
+      },
+      {
+        "name": "message",
+        "type": "string"
+      },
+      {
+        "name": "created_at",
+        "type": "string"
+      }
+    ]
+  }
