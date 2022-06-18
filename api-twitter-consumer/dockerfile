@@ -9,6 +9,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY . . 
 
-ENV GOOGLE_APPLICATION_CREDENTIALS=/usr/app/src/twitter-pipeline-gcp-account.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/usr/app/src/credentials/twitter-pipeline-gcp-account.json
 
 CMD [ "python",  "./twitter_consumer.py"]
