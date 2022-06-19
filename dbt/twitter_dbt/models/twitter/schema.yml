@@ -1,0 +1,45 @@
+
+version: 2
+
+models:
+  - name: tweets
+    description: "A table with user tweets"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: id_user
+        description: "Twitter user id"
+        tests:
+          - not_null
+      - name: message
+        description: "Tweet message"
+        tests:
+          - not_null
+      - name: ts_created
+        description: "Datetime of tweet creation"
+        tests:
+          - not_null
+
+  - name: tests_tweets_enrich 
+    description: "A table filter tests tweets"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: id_user
+        description: "Twitter user id"
+        tests:
+          - not_null
+      - name: message
+        description: "Tweet message"
+        tests:
+          - not_null
+      - name: ts_created
+        description: "Datetime of tweet creation"
+        tests:
+          - not_null
