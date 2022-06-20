@@ -134,3 +134,4 @@ dmypy.json
 #credentials 
 api-twitter-consumer/credentials/*
 dbt/credentials/*
+dbt/twiter_dbt/secrets/*
