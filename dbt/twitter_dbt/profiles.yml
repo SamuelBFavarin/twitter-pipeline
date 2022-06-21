@@ -1,5 +1,5 @@
 twitter_dbt:
-  target: dev
+  target: prod
   outputs:
 
     prod:
@@ -8,7 +8,7 @@ twitter_dbt:
       project: twitter-pipeline-352822
       dataset: twitter
       threads: 4
-      keyfile: /secrets/twitter-pipeline-big-query-user.json
+      keyfile: secrets/twitter-pipeline-big-query-user.json
       timeout_seconds: 300
       priority: interactive
       retries: 1
