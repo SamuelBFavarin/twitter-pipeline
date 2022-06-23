@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY . ./ 
 
-RUN chmod 777 script.sh
-RUN chmod 777 script2.sh
+RUN chmod 777 script_doc.sh
+RUN chmod 777 script_run.sh
 
 CMD ["uvicorn", "invoke:app", "--host", "0.0.0.0", "--port", "8080"]
