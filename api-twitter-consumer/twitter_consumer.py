@@ -11,7 +11,7 @@ ACCESS_TOKEN = credentials_twitter['ACCESS_TOKEN']
 ACCESS_TOKEN_SECRET = credentials_twitter['ACCESS_TOKEN_SECRET']
 CONSUMER_KEY = credentials_twitter['CONSUMER_KEY']
 CONSUMER_SECRET = credentials_twitter['CONSUMER_SECRET']
-FOLLOW_USER = 2941621343
+FOLLOW_USERS = [2941621343, 44196397, 797869498757955589, 2579497028]
 
 #GCLOUD SETUP
 PROJECT_ID = credentials_gcloud['PROJECT_ID']
@@ -37,5 +37,5 @@ class TwitterConsumer(tweepy.Stream):
 
 print("Listing tweets...")
 consumer = TwitterConsumer(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-consumer.filter(follow=[FOLLOW_USER])
+consumer.filter(follow=FOLLOW_USERS)
 consumer.sample()
