@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: tweets_by_user
+    description: "A table with tweets metrics"
+    columns:
+      - name: id_user
+        description: "The user id"
+        tests:
+          - unique
+          - not_null
+      - name: total_tweets
+        description: "Total of tweets"
+        tests:
+          - not_null
+      - name: first_tweet
+        description: "First tweet"
+        tests:
+          - not_null
+      - name: last_tweet
+        description: "Last tweet"
+        tests:
+          - not_null
+      - name: ts_created_first_tweet
+        description: "Datetime of first tweet"
+        tests:
+          - not_null
+      - name: ts_created_last_tweet
+        description: "Datetime of last tweet"
+        tests:
+          - not_null
