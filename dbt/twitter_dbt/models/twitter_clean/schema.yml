@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: tweets
-    description: "A table with user tweets"
+    description: "A table with tweets"
     columns:
       - name: id
         description: "The primary key for this table"
@@ -23,23 +23,19 @@ models:
         tests:
           - not_null
 
-  - name: tests_tweets_enrich 
-    description: "A table filter tests tweets"
+  - name: users 
+    description: "A table with twitter users"
     columns:
-      - name: id
+      - name: id_user
         description: "The primary key for this table"
         tests:
           - unique
           - not_null
-      - name: id_user
-        description: "Twitter user id"
+      - name: ts_included
+        description: "Datetime of first inclusion in database"
         tests:
           - not_null
-      - name: message
-        description: "Tweet message"
-        tests:
-          - not_null
-      - name: ts_created
-        description: "Datetime of tweet creation"
+      - name: ts_last_interaction
+        description: "Datetime of last interaction in database"
         tests:
           - not_null

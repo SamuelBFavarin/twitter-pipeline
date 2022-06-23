@@ -34,5 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   twitter_dbt:
     # Config indicated by + and applies to all files under models/example/
-    twitter:
-      +materialized: view
+    twitter_clean:
+      +materialized: table
+    twitter_metrics:
+      +materialized: table
